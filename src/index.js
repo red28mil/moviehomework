@@ -98,5 +98,5 @@ const App = () => {
         <MovieDetailsPage movie={sample} images={images} />
         );
   };
-  
+
 ReactDOM.render(<App />, document.getElementById("root"));

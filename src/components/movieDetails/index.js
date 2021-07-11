@@ -5,6 +5,7 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import MonetizationIcon from "@material-ui/icons/MonetizationOn";
 import StarRate from "@material-ui/icons/StarRate";
 import NavigationIcon from "@material-ui/icons/Navigation";
+import HomeIcon from "@material-ui/icons/Home";
 import Fab from "@material-ui/core/Fab";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -58,13 +59,23 @@ const MovieDetails = ( props) => {
           icon={<MonetizationIcon />}
           label={`${movie.revenue.toLocaleString()}`}
         />
+        
         <Chip
           icon={<StarRate />}
-          label={`${movie.vote_average} (${movie.vote_count}`}
+          label={`${movie.vote_average} ${movie.vote_count}`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
 
+
+      <Paper component="ul" className={classes.root}>
+      <li>
+          <Chip label="Production Countries" className={classes.chip} color="primary" />
+        </li>
+        <Chip
+          icon={<HomeIcon />}
+          label={`France, Ireland`} />
+        </Paper>
       <Fab
         color="secondary"
         variant="extended"

@@ -22,6 +22,7 @@ const MoviePage = (props) => {
   const classes = useStyles();
   const movie = props.movie;
   const images = props.images;
+  
 
   return (
     <>
