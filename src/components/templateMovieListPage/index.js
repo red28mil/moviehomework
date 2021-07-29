@@ -41,6 +41,7 @@ function MovieListPageTemplate({ movies, title, selectFavorite }) {
             onUserInput={handleChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}
+          
           />
         </Grid>
         <MovieList selectFavorite={selectFavorite} movies={displayedMovies}></MovieList>

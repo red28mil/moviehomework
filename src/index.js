@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
@@ -18,8 +19,12 @@ const App = () => {
         <li>
           <Link to="/movies/favorites">Favorites</Link>
         </li>
+        <li>
+          <Link to="/movies/upcoming">Upcoming</Link>
+        </li>
       </ul>
       <Switch>
+        <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
         <Route path="/reviews/:id" component={MovieReviewPage}/>
         <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
         <Route path="/movies/:id" component={MoviePage} />
