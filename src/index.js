@@ -4,12 +4,13 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
-
+import SiteHeader from './components/siteHeader';
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // NEW
 
 const App = () => {
   return (
     <BrowserRouter>
+    <SiteHeader/>
       <ul>
         <li>
           <Link to="/">Home</Link>
