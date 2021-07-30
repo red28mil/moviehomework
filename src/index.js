@@ -9,6 +9,7 @@ import SiteHeader from './components/siteHeader';
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // NEW
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import MoviesContextProvider from "./contexts/moviesContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,8 +25,9 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-    
     <SiteHeader/>
+    <MoviesContextProvider>
+      {" "}
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -45,7 +47,7 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Redirect from="*" to="/" />
       </Switch>
-
+     </MoviesContextProvider>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
