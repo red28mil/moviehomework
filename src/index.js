@@ -1,3 +1,4 @@
+import AddMovieReviewPage from './pages/addMovieReviewPage'
 import React from "react";
 import ReactDOM from "react-dom";
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
@@ -40,6 +41,7 @@ const App = () => {
         </li>
       </ul>
       <Switch>
+        <Route exact path="/reviews/form" component={AddMovieReviewPage}/>
         <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
         <Route path="/reviews/:id" component={MovieReviewPage}/>
         <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
@@ -50,8 +52,7 @@ const App = () => {
      </MoviesContextProvider>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-
+  </QueryClientProvider>
   );
 };
 
